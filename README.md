@@ -58,6 +58,8 @@ Get your Scalekit credentials from your dashboard at [app.scalekit.com](https://
    ```
 
 2. Follow the authorization prompts for each service (e.g., Gmail)
+<img width="1418" height="198" alt="image" src="https://github.com/user-attachments/assets/eaefd372-6030-40ec-9a88-1f1dd8b3f421" />
+
 3. Start chatting with the agent and ask questions about your emails or general queries
 
 ## Example Queries

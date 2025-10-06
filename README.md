@@ -53,15 +53,16 @@ SCALEKIT_ENV_URL=your_scalekit_environment_url
 
 ## Usage
 
-1. Run the agent:
+1.<b> Run the agent:</b>
    ```bash
    adk run scalekit_tool_agent
    ```
 
-2. Follow the authorization prompts for each service (e.g., Gmail)
-<img width="1200" height="198" alt="image" src="https://github.com/user-attachments/assets/eaefd372-6030-40ec-9a88-1f1dd8b3f421" />
+2. <b>Click on the authorization link for the Gmail and press Enter to continue</b>
+<img width="800" height="120" alt="image" src="https://github.com/user-attachments/assets/eaefd372-6030-40ec-9a88-1f1dd8b3f421" />
 
-3. Start chatting with the agent and ask questions about your emails or general queries
+   
+3. <b> Start chatting with the agent and ask questions about your emails or general queries</b>
 
 ## Example Queries
 

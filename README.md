@@ -54,6 +54,7 @@ SCALEKIT_ENV_URL=your_scalekit_environment_url
 ## Usage
 
 1.<b> Run the agent:</b>
+if you are using uv activate you venv `source .venv/bin/activate`
    ```bash
    adk run scalekit_tool_agent
    ```
@@ -64,8 +65,12 @@ SCALEKIT_ENV_URL=your_scalekit_environment_url
    
 3. <b> Start chatting with the agent and ask questions about your emails or general queries</b>
 
+<img width="368" height="33" alt="image" src="https://github.com/user-attachments/assets/c1e197aa-31f4-43eb-817f-2e502070ed4a" />
+
+
+
 ## Example Queries
 
-- "Show me my latest unread email"
+- "Show me my 3 latest emails"
 - "What are my unread emails about?"
 - "Search for emails from [sender]"

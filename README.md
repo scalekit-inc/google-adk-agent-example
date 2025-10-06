@@ -3,12 +3,7 @@
 A conversational Google ADK agent powered by Gemini 2.5 Flash with Scalekit integration that demonstrates tool calling capabilities.
 This project serves as a foundation for building Google ADK agents with real API integrations.
 
-## Features
 
-- **Gemini 2.5 Flash Agent**: Uses Google's Gemini 2.5 Flash for intelligent conversations and tool selection
-- **Scalekit Tools**: Integrated tools for various services (Gmail, etc.)
-- **Interactive Chat**: Command-line interface for natural conversations
-- **OAuth Authorization**: Secure authorization flow for connected services
 
 ## Prerequisites
 
@@ -67,36 +62,6 @@ Get your Scalekit credentials from your dashboard at [app.scalekit.com](https://
 
 ## Example Queries
 
-- "Show me my recent emails"
+- "Show me my latest unread email"
 - "What are my unread emails about?"
 - "Search for emails from [sender]"
-- "Summarize my inbox"
-
-## Project Structure
-
-```
-google-adk-agent-example/
-├── scalekit_tool_agent/
-│   ├── __init__.py
-│   ├── agent.py          # Main agent implementation
-│   └── .env              # Environment variables (gitignored)
-├── pyproject.toml        # Project dependencies
-├── uv.lock              # Dependency lock file
-├── .gitignore           # Git ignore rules
-└── README.md            # This file
-```
-
-## Tech Stack
-
-- **Google ADK**: Agent framework for building conversational AI
-- **Gemini 2.5 Flash**: Google's latest language model
-- **Scalekit SDK**: OAuth and integration management
-- **Python 3.11+**: Required Python version
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-MIT License

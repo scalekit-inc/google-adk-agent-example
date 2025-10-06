@@ -29,12 +29,14 @@ This project serves as a foundation for building Google ADK agents with real API
 3. Set up your environment variables:
    ```bash
    cp scalekit_tool_agent/.env.example scalekit_tool_agent/.env
-   # Edit scalekit_tool_agent/.env and add your credentials
    ```
+Edit scalekit_tool_agent/.env and add your credentials
 
 ## Configuration
 
 Create a `scalekit_tool_agent/.env` file with the following variables:
+Get your Scalekit credentials from your dashboard at [app.scalekit.com](https://app.scalekit.com):
+- Navigate to Developers → Settings → API Credentials
 
 ```bash
 # Google Configuration
@@ -47,18 +49,20 @@ SCALEKIT_CLIENT_SECRET=your_scalekit_client_secret
 SCALEKIT_ENV_URL=your_scalekit_environment_url
 ```
 
-Get your Scalekit credentials from your dashboard at [app.scalekit.com](https://app.scalekit.com):
-- Navigate to Developers → Settings → API Credentials
+
 
 ## Usage
 
-1. Run the agent:
+1.<b> Run the agent:</b>
    ```bash
    adk run scalekit_tool_agent
    ```
 
-2. Follow the authorization prompts for each service (e.g., Gmail)
-3. Start chatting with the agent and ask questions about your emails or general queries
+2. <b>Click on the authorization link for the Gmail and press Enter to continue</b>
+<img width="800" height="120" alt="image" src="https://github.com/user-attachments/assets/eaefd372-6030-40ec-9a88-1f1dd8b3f421" />
+
+   
+3. <b> Start chatting with the agent and ask questions about your emails or general queries</b>
 
 ## Example Queries
 

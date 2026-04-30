@@ -49,6 +49,56 @@ SCALEKIT_CLIENT_SECRET=your_scalekit_client_secret
 SCALEKIT_ENV_URL=your_scalekit_environment_url
 ```
 
+## Using a different model
+
+This sample defaults to `gemini-2.5-flash`, but the Scalekit integration is not tied to Gemini. If you already have Anthropic or OpenAI credentials, or if Gemini is rate-limited in your environment, you can swap the model without changing the Scalekit tool setup.
+
+For ADK Python, the most straightforward non-Gemini path is `LiteLlm`.
+
+1. Install ADK's optional model extensions:
+   ```bash
+   pip install "google-adk[extensions]"
+   ```
+
+2. Add the provider API key you want to use to `scalekit_tool_agent/.env`:
+   ```bash
+   # For Anthropic via LiteLLM
+   ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+   # For OpenAI via LiteLLM
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+3. Update `scalekit_tool_agent/agent.py` to use `LiteLlm` instead of a Gemini model string:
+   ```python
+   from google.adk.agents import Agent
+   from google.adk.models.lite_llm import LiteLlm
+
+   root_agent = Agent(
+       name="scalekit_tool_agent",
+       model=LiteLlm(model="anthropic/claude-3-haiku-20240307"),
+       description=(
+           "You are a tool agent that can work with Gmail and answer user questions."
+       ),
+       instruction=(
+           "Use Gmail tools to answer user questions based on their emails "
+           "and general questions."
+       ),
+       tools=gmail_tools,
+   )
+   ```
+
+   Or switch to OpenAI:
+   ```python
+   model=LiteLlm(model="openai/gpt-4o")
+   ```
+
+Notes:
+
+- `LiteLlm` expects provider credentials such as `ANTHROPIC_API_KEY` or `OPENAI_API_KEY` to be available in the environment.
+- The rest of this sample stays the same. You are only swapping the `model=` configuration.
+- If you install only core `google-adk`, importing `google.adk.models.lite_llm` will fail. Install the `extensions` extra first.
+
 
 
 ## Usage
